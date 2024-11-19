@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+
+</head>
+
+<body>
+    <!-- The Navigation bar Start from here -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+        <div class="container-fluid position-relative">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/images/logo1.png" alt="Logo" height="60" class="d-inline-block align-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav center-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="categoris.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <div class="nav-link ">
+                            <a href="search.html" style="text-decoration: none;">
+                            <img src="./assets/images/search-heart.svg" alt="Search" width="24" height="24">
+                        </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="./assets/images/bag.svg" alt="Cart" width="24" height="24">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- product section  -->
+
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Products</h2>
+
+        <div class="row">
+            <!-- Filters Sidebar -->
+            <div class="col-md-3">
+                <div class="filter-section">
+                    <h3 class="filter-title">Filters</h3>
+
+                    <!-- Categories -->
+                    <div class="mb-4">
+                        <h4 class="h6 mb-3">Category</h4>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="cat1">
+                            <label class="form-check-label" for="cat1">Category 1</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="cat2">
+                            <label class="form-check-label" for="cat2">Category 2</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="cat3">
+                            <label class="form-check-label" for="cat3">Category 3</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="cat4">
+                            <label class="form-check-label" for="cat4">Category 4</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="cat5">
+                            <label class="form-check-label" for="cat5">Category 5</label>
+                        </div>
+                    </div>
+
+                    <!-- Price Range -->
+                    <div class="mb-4">
+                        <h4 class="h6 mb-3">Price Range</h4>
+                        <div id="price-slider"></div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <span>₹100</span>
+                            <span>₹1000</span>
+                        </div>
+                    </div>
+
+                    <!-- Colors -->
+                    <div class="mb-4">
+                        <h4 class="h6 mb-3">Colors</h4>
+                        <div class="d-flex flex-wrap">
+                            <div class="color-option" style="background-color: #000000"></div>
+                            <div class="color-option" style="background-color: #FFFFFF"></div>
+                            <div class="color-option selected" style="background-color: #007F00"></div>
+                            <div class="color-option" style="background-color: #0000FF"></div>
+                            <div class="color-option" style="background-color: #FF0000"></div>
+                        </div>
+                    </div>
+
+                    <!-- Sizes -->
+                    <div class="mb-4">
+                        <h4 class="h6 mb-3">Sizes</h4>
+                        <div class="d-flex flex-wrap">
+                            <span class="size-option">XS</span>
+                            <span class="size-option selected">S</span>
+                            <span class="size-option">M</span>
+                            <span class="size-option">L</span>
+                            <span class="size-option">XL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="col-md-9">
+                <!-- Sorting Options -->
+                <div class="d-flex justify-content-end mb-4">
+                    <select class="sort-select">
+                        <option value="">Sort by</option>
+                        <option value="name-asc">Name: A to Z</option>
+                        <option value="name-desc">Name: Z to A</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating">Most Rated</option>
+                        <option value="newest">Newest First</option>
+                    </select>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="row g-4">
+                    <!-- Product Cards -->
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/f1.jpg" class="card-img-top p-4"
+                                alt="Green TOO COOL Sweatshirt">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repeat similar product cards for other items -->
+                    <!-- You can copy the above product card structure for other items -->
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/f2.jpg" class="card-img-top p-4" alt="Grey Sweatshirt">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/f3.jpg" class="card-img-top p-4" alt="Light Blue Blazer">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/f4.jpg" class="card-img-top p-4" alt="Light Blue Blazer">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/f5.jpg" class="card-img-top p-4" alt="Light Blue Blazer">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/f6.jpg" class="card-img-top p-4" alt="Light Blue Blazer">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/f7.jpg" class="card-img-top p-4" alt="Light Blue Blazer">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/f8.jpg" class="card-img-top p-4" alt="Light Blue Blazer">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/n1.jpg" class="card-img-top p-4" alt="Light Blue Blazer">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/n2.jpg" class="card-img-top p-4" alt="Light Blue Blazer">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/n3.jpg" class="card-img-top p-4" alt="Light Blue Blazer">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/n4.jpg" class="card-img-top p-4" alt="Light Blue Blazer">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/n5.jpg" class="card-img-top p-4" alt="Light Blue Blazer">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/n6.jpg" class="card-img-top p-4" alt="Light Blue Blazer">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/n7.jpg" class="card-img-top p-4" alt="Light Blue Blazer">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card h-100">
+                            <span class="new-badge">New</span>
+                            <img src="./assets/images/n8.jpg" class="card-img-top p-4" alt="Light Blue Blazer">
+                            <div class="card-body">
+                                <div class="star-rating mb-2">
+                                    ★★★☆☆
+                                </div>
+                                <a href="#" class="product-title">
+                                    <h5 class="card-title">Green Dress with details</h5>
+                                </a>
+                                <p class="card-text text-primary">₹400</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more product cards as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer Section -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Logo and Description -->
+                <div class="col-md-3 mb-4">
+                    <div class="footer-logo"><img src="./assets/images/logo1.png" alt="" style="height: 80px;"></div>
+                    <p class="footer-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit totam eos illum ipsum quas ad
+                        dignissimos
+                        magni veritatis natus voluptatem.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3 mb-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="product.html">Offers & Discounts</a></li>
+                        <li><a href="product.html">Get Coupon</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- New Products -->
+                <div class="col-md-3 mb-4">
+                    <h3 class="footer-title">New Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="product.html">Woman Cloth</a></li>
+                        <li><a href="product.html">Fashion Accessories</a></li>
+                        <li><a href="product.html">Man Accessories</a></li>
+                        <li><a href="product.html">Boys</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-md-3 mb-4">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Frequently Asked Questions</a></li>
+                        <li><a href="contact.html">Report a Payment Issue</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                Copyright ©2024 All rights reserved
+            </div>
+        </div>
+
+        <!-- Scroll to Top Button -->
+        <a href="#" class="scroll-top">
+            ↑
+        </a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

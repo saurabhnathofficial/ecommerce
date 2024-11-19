@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop by Category</title>
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+
+</head>
+
+<body>
+    <!-- The Navigation bar Start from here -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+        <div class="container-fluid position-relative">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/images/logo1.png" alt="Logo" height="60" class="d-inline-block align-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav center-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="categoris.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <div class="nav-link ">
+                            <a href="search.html" style="text-decoration: none;">
+                            <img src="./assets/images/search-heart.svg" alt="Search" width="24" height="24">
+                        </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="./assets/images/bag.svg" alt="Cart" width="24" height="24">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Checkout starts here -->
+    <section class="Checkout py-5 my-5" id="Checkout">
+        <div class="container ">
+            <div class="section_title text-center mb-5">
+                <h1 class="text-capitalize">Checkout</h1>
+            </div>
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-8">
+                    <!-- Card -->
+                    <div class="card bg_checkout_1 pb-5">
+                        <div class="card-body">
+                            <h5 class="mb-5">Billing details</h5>
+                            <!-- Grid row -->
+                            <div class="row">
+                                <!-- Grid column -->
+                                <div class="col-lg-6">
+                                    <!-- First name -->
+                                    <div class="form-group mb-0 mb-lg-4">
+                                        <label for="firstName">First name</label>
+                                        <input type="text" id="firstName" class="form-control mb-0 mb-lg-2">
+                                    </div>
+                                </div>
+                                <!-- Grid column -->
+
+                                <!-- Grid column -->
+                                <div class="col-lg-6">
+                                    <!-- Last name -->
+                                    <div class="form-group md-outline">
+                                        <label for="lastName">Last name</label>
+                                        <input type="text" id="lastName" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- Grid column -->
+                            </div>
+                            <!-- Grid row -->
+
+                            <!-- Phone -->
+                            <div class="form-group">
+                                <label for="form18">Phone</label>
+                                <input type="number" id="form18" class="form-control">
+                            </div>
+
+                            <!-- Email address -->
+                            <div class="form-group">
+                                <label for="form19">Email address</label>
+                                <input type="email" id="form19" class="form-control">
+                            </div>
+
+                            <!-- Country -->
+                            <div class="d-flex flex-wrap">
+                                <div class="w-100">
+                                    <label>Country</label>
+                                    <select class="custom-select form-group">
+                                        <option value="" selected>Choose your option</option>
+                                        <option value="1">India</option>
+                                        <option value="2">Usa</option>
+                                        <option value="3">Dubai 3</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Address Part 1 -->
+                            <div class="form-group">
+                                <label for="form14">Address Line 1</label>
+                                <input type="text" id="form14" placeholder="House number and 
+                                street name" class="form-control">
+                            </div>
+
+                            <!-- Address Part 2 -->
+                            <div class="form-group">
+                                <label for="form15">Address Line 2</label>
+                                <input type="text" id="form15" placeholder="Apartment, suite, unit 
+                                etc. (optional)" class="form-control">
+                            </div>
+
+                            <!-- Postcode / ZIP -->
+                            <div class="form-group">
+                                <label for="form16">Postcode / ZIP</label>
+                                <input type="text" id="form16" class="form-control">
+                            </div>
+
+                            <!-- Town / City -->
+                            <div class="form-group">
+                                <label for="form17">Town / City</label>
+                                <input type="text" id="form17" class="form-control">
+                            </div>
+
+                            <!-- Additional information -->
+                            <div class="form-group">
+                                <label for="form76">Additional information</label>
+                                <textarea id="form76" class="md-textarea form-control" rows="4"></textarea>
+                            </div>
+                            <!-- <button class="btn btn-success"><i class="fa fa-check"></i> 
+                                Purchase</button> -->
+                            <div class="text-center mt-5">
+                                <a href="orderConfirm.html" class="btn btn-primary">
+                                    <i class="fa fa-check mr-2"></i>Purchase
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 bg_checkout_1 h-25 rounded">
+                    <!-- Card -->
+                    <div class="mb-3">
+                        <div class="pt-4">
+                            <h5 class="mb-3">Order summary</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-2">
+                                    <span>Product name 1</span>
+                                    <span>x2</span>
+                                    <span>₹2598</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-2">
+                                    <span>Product name 2</span>
+                                    <span>x2</span>
+                                    <span>₹2598</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between 
+                                align-items-center border-top px-0 mb-3">
+                                    <div>
+                                        <strong>Total amount</strong>
+                                        <strong>
+                                            <p class="mb-0">(including VAT)</p>
+                                        </strong>
+                                    </div>
+                                    <span><strong>₹5398</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+                <!--Grid column-->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- footer Section -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Logo and Description -->
+                <div class="col-md-3 mb-4">
+                    <div class="footer-logo"><img src="./assets/images/logo1.png" alt="" style="height: 80px;"></div>
+                    <p class="footer-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit totam eos illum ipsum quas ad
+                        dignissimos
+                        magni veritatis natus voluptatem.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3 mb-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="product.html">Offers & Discounts</a></li>
+                        <li><a href="product.html">Get Coupon</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- New Products -->
+                <div class="col-md-3 mb-4">
+                    <h3 class="footer-title">New Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="product.html">Woman Cloth</a></li>
+                        <li><a href="product.html">Fashion Accessories</a></li>
+                        <li><a href="product.html">Man Accessories</a></li>
+                        <li><a href="product.html">Boys</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-md-3 mb-4">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Frequently Asked Questions</a></li>
+                        <li><a href="contact.html">Report a Payment Issue</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                Copyright ©2024 All rights reserved
+            </div>
+        </div>
+
+        <!-- Scroll to Top Button -->
+        <a href="#" class="scroll-top">
+            ↑
+        </a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

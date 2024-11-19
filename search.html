@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+
+</head>
+
+<body>
+    <!-- The Navigation bar Start from here -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+        <div class="container-fluid position-relative">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/images/logo1.png" alt="Logo" height="60" class="d-inline-block align-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav center-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="categoris.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <div class="nav-link ">
+                            <a href="search.html" style="text-decoration: none;">
+                            <img src="./assets/images/search-heart.svg" alt="Search" width="24" height="24">
+                        </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="./assets/images/bag.svg" alt="Cart" width="24" height="24">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- search section ends here -->
+
+    <section class="search_section py-5 my-5" id="search_section">
+        <div class="container">
+            <div class="title text-center mb-5">
+                <h2>Search</h2>
+            </div>
+            <div class="row">
+                <!-- BEGIN RESULT -->
+                <div class="col-md-10 mx-auto">
+                    <!-- BEGIN SEARCH INPUT -->
+                    <div class="input-group">
+                        <input type="text" class="form-control" value="xyz">
+                        <span class="input-group-btn"> <button class="btn btn-primary" type="button"><i class="fa 
+                        fa-search"></i></button>
+                        </span>
+                    </div>
+                    <!-- END SEARCH INPUT -->
+                    <small>Showing all results matching "shirts"</small>
+
+                    <!-- BEGIN TABLE RESULT -->
+                    <div class="table-responsive mt-3">
+                        <table class="table table-hover">
+                            <tbody class="border-bottom">
+                                <tr>
+                                    <td class="number text-center">1</td>
+                                    <td class="image"><img src="assets/images/f1.jpg" width="100px"
+                                            class="img img-fluid" alt=""></td>
+                                    <td class="product"><strong>Down Solder</strong><br>Down Solder shirts are trending now day. lets try it.
+                                    </td>
+                                    <td class="rate text-right"><span><i class="fa fa-star"></i><i
+                                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                                class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
+                                    <td class="price text-right">₹950</td>
+                                </tr>
+                                <tr>
+                                    <td class="number text-center">2</td>
+                                    <td class="image"><img src="assets/images/f2.jpg" width="100px"
+                                            class="img img-fluid" alt=""></td>
+                                    <td class="product"><strong>Down Sloder Green</strong><br>Down Solder shirts are trending now day. lets try it.
+                                    </td>
+                                    <td class="rate text-right"><span><i class="fa fa-star"></i><i
+                                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                                class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
+                                    <td class="price text-right">₹450</td>
+                                </tr>
+                                <tr>
+                                    <td class="number text-center">3</td>
+                                    <td class="image"><img src="assets/images/f6.jpg" width="100px"
+                                            class="img img-fluid" alt=""></td>
+                                    <td class="product"><strong>Down Solder Red</strong><br>Down Solder shirts are trending now day. lets try it.
+                                    </td>
+                                    <td class="rate text-right"><span><i class="fa fa-star"></i><i
+                                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                                class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
+                                    <td class="price text-right">₹850</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- END TABLE RESULT -->
+                </div>
+                <!-- END RESULT -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer Section -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Logo and Description -->
+                <div class="col-md-3 mb-4">
+                    <div class="footer-logo"><img src="./assets/images/logo1.png" alt="" style="height: 80px;"></div>
+                    <p class="footer-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit totam eos illum ipsum quas ad
+                        dignissimos
+                        magni veritatis natus voluptatem.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3 mb-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="product.html">Offers & Discounts</a></li>
+                        <li><a href="product.html">Get Coupon</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- New Products -->
+                <div class="col-md-3 mb-4">
+                    <h3 class="footer-title">New Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="product.html">Woman Cloth</a></li>
+                        <li><a href="product.html">Fashion Accessories</a></li>
+                        <li><a href="product.html">Man Accessories</a></li>
+                        <li><a href="product.html">Boys</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-md-3 mb-4">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Frequently Asked Questions</a></li>
+                        <li><a href="contact.html">Report a Payment Issue</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                Copyright ©2024 All rights reserved
+            </div>
+        </div>
+
+        <!-- Scroll to Top Button -->
+        <a href="#" class="scroll-top">
+            ↑
+        </a>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
